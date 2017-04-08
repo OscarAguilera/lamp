@@ -70,11 +70,7 @@ service { 'mysql':
   ensure => running,
 }
 
-# install php5 package
-package { 'php5':
-  require => Exec['apt-update'],        # require 'apt-update' before installing
-  ensure => installed,
-}
+#PHP5 not found
 
 # ensure info.php file exists
 file { '/var/www/html/info.php':
